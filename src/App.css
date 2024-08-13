@@ -1,38 +1,393 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.active {
+  background-color: #1d4ed8;
+  padding: 10px 12px;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 60px;
+  background-color: #339;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+
+}
+
+.menu-link ul {
+  display: flex;
+  gap: 16px;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li a:not(.active):hover {
+  text-decoration: underline;
+  /* background-color: #172554; */
+}
+
+/* home page */
+.container {
+  /* background-image: url(../public/assets/img/pic.webp); */
+  background-image: url(https://www.pngmart.com/files/8/Notebook-PNG-Transparent-Images.png);
+  height: 92vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.content {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.content h1 {
+  font-size: 4.5rem;
+  color: #336;
+}
+
+.content p {
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.content .btn {
+  padding: 10px 12px;
+  margin-top: 20px;
+  border: none;
+  font-size: 1rem;
+  background-color: rgb(29, 140, 250);
+  color: white;
+  font-weight: 600;
+}
+
+/* second part */
+.secondpart {
+  margin: 30px auto 0px;
+  width: 60%;
+  text-align: center;
+  height: 35vh;
+  line-height: 1.5;
+
+}
+
+.secondpart .link img {
+  /* border: 2px solid red; */
+  overflow: hidden;
+  height: 8vh;
+  margin-top: 10px;
+  background: transparent;
+}
+
+/* footer */
+.footer {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #eef7f6;
+}
+
+.footer form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 30px auto;
+}
+
+.footer input[type='text'],
+textarea,
+button {
+  padding: 10px 12px;
+  margin: 10px 0;
+}
+
+.footer {
+  padding: 10px 12px;
+}
+
+.footer button {
+  background-color: rgb(198, 194, 194);
+}
+
+.footer-two {
+  background-color: #339;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+.content-two {
+  line-height: 1.5;
+}
+
+/* About page */
+
+.about-content {
+  width: 90%;
+  margin: 40px auto;
+  color: #334;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.about-content img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.about-content h1 {
+  padding-bottom: 24px;
+}
+
+.about-content .about-heading {
+  padding: 24px;
+}
+
+.about-content-two {
+  background-color: #333;
+  height: 58vh;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.about-content-two p {
+  margin: 10px;
+  /* text-align: center; */
+}
+
+.about-content-two h1 {
+  margin-top: 20px;
+  overflow: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about-content-two h2 {
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about-content-two .about-half {
+  width: 50%;
+  text-align: justify;
+  margin-left: 60px;
+  line-height: 1.7;
+  margin-top: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about-content-two .btn-one {
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  margin-left: 60px;
+  padding: 10px 12px;
+  border: none;
+}
+
+.about-content-two .btn-two {
+  padding: 12px 14p;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+
+.mission {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.mission img {
+  width: 80%;
+  padding: 20px;
+}
+
+.mission p,
+h1 {
+  margin-top: 30px;
+}
+
+/* conatct */
+
+.contact-first {
+  border: 2px solid grey;
+  background-color: #8b8888;
+  height: 56vh;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+.Contact-content {
+  margin: 40px auto;
+  width: 70%;
+  height: 40vh;
+  background-color: #8b8888;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-details {
+  /* background-color: rgb(250, 247, 247); */
+  width: 70%;
+  height: 70vh;
+  /* position: absolute;
+  top: 80%;
+  left: 50%; */
+  padding: 66px 5% 16px 5%;
+  margin: -145px auto 0px;
+  /* transform: translate(-50%, -50%); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact-form {
+  background-color: rgb(250, 247, 247);
+  overflow: hidden;
+}
+
+.contact-form input {
+  padding: 10px 12px;
+  display: flex;
+  width: 80%;
+  margin: 10px;
+  margin-left: 40px;
+
+}
+
+.contact-form button {
+  background-color: grey;
+  margin-left: 40px;
+}
+
+.contact-form h2 {
+  margin: 40px;
+}
+
+.footer-two-one {
+  margin-top: 20%;
+  background-color: #339;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+/* services */
+/* cards */
+.card {
+  width: 350px;
+  height: 250px;
+  /* border: 2px solid red; */
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 1px 2px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  /* border: 2px solid red; */
+  width: 40%;
+  margin-left: 5rem;
+  /* margin-top: 1rem; */
+  border-radius: 10px;
+  height: 77px
+}
+
+.card-title {
+  text-align: center;
+  padding: 0.7rem;
+  font-weight: 700;
+}
+
+.card .para {
+  line-height: 1.5;
+  color: #333;
+  margin: 10xp;
+}
+
+.service-container {
+  display: flex;
+  gap: 24px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.learn-more {
+  /* border: 2px solid red; */
+  text-decoration: underline;
+  padding: 10px 12px;
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #efeaea;
+  border-radius: 10px;
+}
+
+.service-container-one {
+  /* border: 2px solid red; */
+  height: 50vh;
+  width: 70%;
+  background-color: #fff;
+  margin: 4rem auto;
+  box-shadow: 1px 2px 3px 4px rgba(22, 253, 120, 0.1);
+}
+
+/* .service-container-one h3,h1,p{
+  margin: 2rem;
+  color: slategray;
+  text-align: center;
+} */
+
+@media (max-width:768px) {
+  .container {
+    height: 80vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container .content h1 {
+    font-size: 2.4rem;
+  }
+
+  .container .content p {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .container .btn {
+    margin-top: 0px;
+  }
+
+  .secondpart {
+    border: 2px solid red;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    height: 50vh;
+    line-height: 1.5;
+  }
+
+  .secondpart .link img {
+    height: 8vh;
+    background: transparent;
   }
 }
